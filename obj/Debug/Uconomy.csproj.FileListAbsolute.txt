@@ -1,0 +1,12 @@
+C:\Users\Avery\source\repos\Uconomy-master\obj\Debug\Uconomy.csprojResolveAssemblyReference.cache
+C:\Users\Avery\source\repos\Uconomy-master\obj\Debug\Uconomy.csproj.CoreCompileInputs.cache
+C:\Users\Avery\source\repos\Uconomy-master\bin\Debug\Libraries\System.Management.dll
+C:\Users\Avery\source\repos\Uconomy-master\bin\Debug\Libraries\I18N.dll
+C:\Users\Avery\source\repos\Uconomy-master\bin\Debug\Libraries\I18N.West.dll
+C:\Users\Avery\source\repos\Uconomy-master\bin\Debug\Libraries\MySql.Data.dll
+C:\Users\Avery\source\repos\Uconomy-master\bin\Debug\Libraries\System.Data.dll
+C:\Users\Avery\source\repos\Uconomy-master\bin\Debug\Libraries\System.Transactions.dll
+C:\Users\Avery\source\repos\Uconomy-master\bin\Debug\Uconomy.dll
+C:\Users\Avery\source\repos\Uconomy-master\bin\Debug\Uconomy.pdb
+C:\Users\Avery\source\repos\Uconomy-master\obj\Debug\Uconomy.dll
+C:\Users\Avery\source\repos\Uconomy-master\obj\Debug\Uconomy.pdb
