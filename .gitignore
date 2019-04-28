@@ -15,7 +15,8 @@ build/
 bld/
 [Bb]in/
 [Oo]bj/
-
+obj/
+bin/
 # Roslyn cache directories
 *.ide/
 
@@ -187,3 +188,4 @@ FakesAssemblies/
 GeneratedArtifacts/
 _Pvt_Extensions/
 ModelManifest.xml
+/.vs/Uconomy/v15/Server/sqlite3
