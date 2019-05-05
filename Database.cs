@@ -22,7 +22,7 @@ namespace fr34kyn01535.Uconomy
                 connection = new MySqlConnection(String.Format("SERVER={0};DATABASE={1};UID={2};PASSWORD={3};PORT={4};", Uconomy.Instance.Configuration.Instance.DatabaseAddress, Uconomy.Instance.Configuration.Instance.DatabaseName, Uconomy.Instance.Configuration.Instance.DatabaseUsername, Uconomy.Instance.Configuration.Instance.DatabasePassword, Uconomy.Instance.Configuration.Instance.DatabasePort));
             }
             catch (Exception ex)
-            {
+            { 
                 Logger.LogException(ex);
             }
             return connection;
