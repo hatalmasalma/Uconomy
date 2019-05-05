@@ -19,7 +19,7 @@ namespace fr34kyn01535.Uconomy
         public static string MessageColor;
 
         protected override void Load()
-        {
+        { 
             Instance = this;
             Database = new DatabaseManager();
             U.Events.OnPlayerConnected+=Events_OnPlayerConnected;
