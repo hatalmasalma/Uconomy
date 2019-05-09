@@ -111,6 +111,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Libraries\I18N.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Libraries\System.Management.dll">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
