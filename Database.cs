@@ -1,6 +1,7 @@
 ﻿using MySql.Data.MySqlClient;
 using Rocket.Core.Logging;
 using System;
+using System.Globalization;
 
 namespace fr34kyn01535.Uconomy
 {
@@ -21,7 +22,7 @@ namespace fr34kyn01535.Uconomy
                 connection = new MySqlConnection(String.Format("SERVER={0};DATABASE={1};UID={2};PASSWORD={3};PORT={4};", Uconomy.Instance.Configuration.Instance.DatabaseAddress, Uconomy.Instance.Configuration.Instance.DatabaseName, Uconomy.Instance.Configuration.Instance.DatabaseUsername, Uconomy.Instance.Configuration.Instance.DatabasePassword, Uconomy.Instance.Configuration.Instance.DatabasePort));
             }
             catch (Exception ex)
-            {
+            { 
                 Logger.LogException(ex);
             }
             return connection;
@@ -66,7 +67,7 @@ namespace fr34kyn01535.Uconomy
             {
                 MySqlConnection connection = createConnection();
                 MySqlCommand command = connection.CreateCommand();
-                command.CommandText = "update `" + Uconomy.Instance.Configuration.Instance.DatabaseTableName + "` set `balance` = balance + (" + increaseBy + ") where `steamId` = '" + id.ToString() + "'; select `balance` from `" + Uconomy.Instance.Configuration.Instance.DatabaseTableName + "` where `steamId` = '" + id.ToString() + "'";
+                command.CommandText = "update `" + Uconomy.Instance.Configuration.Instance.DatabaseTableName + "` set `balance` = balance + (" + increaseBy.ToString(CultureInfo.InvariantCulture) + ") where `steamId` = '" + id.ToString() + "'; select `balance` from `" + Uconomy.Instance.Configuration.Instance.DatabaseTableName + "` where `steamId` = '" + id.ToString() + "'";
                 connection.Open();
                 object result = command.ExecuteScalar();
                 if (result != null) Decimal.TryParse(result.ToString(), out output);
@@ -96,7 +97,7 @@ namespace fr34kyn01535.Uconomy
 
                 if (exists == 0)
                 {
-                    command.CommandText = "insert ignore into `" + Uconomy.Instance.Configuration.Instance.DatabaseTableName + "` (balance,steamId,lastUpdated) values(" + Uconomy.Instance.Configuration.Instance.InitialBalance + ",'" + id.ToString() + "',now())";
+                    command.CommandText = "insert ignore into `" + Uconomy.Instance.Configuration.Instance.DatabaseTableName + "` (balance,steamId,lastUpdated) values(" + Uconomy.Instance.Configuration.Instance.InitialBalance.ToString(CultureInfo.InvariantCulture) + ",'" + id.ToString() + "',now())";
                     connection.Open();
                     command.ExecuteNonQuery();
                     connection.Close();
