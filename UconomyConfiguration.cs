@@ -19,7 +19,7 @@ namespace fr34kyn01535.Uconomy
 
         public void LoadDefaults()
         {
-            DatabaseAddress = "localhost";
+            DatabaseAddress = "127.0.0.1";
             DatabaseUsername = "unturned";
             DatabasePassword = "password";
             DatabaseName = "unturned";
